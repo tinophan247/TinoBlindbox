@@ -6,9 +6,9 @@ function HeaderAdmin({ onToggleSidebar }) {
   return (
     <div className="h-16 bg-white shadow-lg flex justify-between items-center px-3 sm:px-5 sticky top-0 z-50">
       {/* Left Side: Title */}
-      <div className="flex gap-2 sm:gap-4">
+      <div className="flex items-center gap-2 sm:gap-4">
         <img alt="logo" className="w-10" src="https://firebasestorage.googleapis.com/v0/b/uploadingfile-73c77.appspot.com/o/Designer%20(5)%20(1).png?alt=media&token=43a61437-863b-478f-81f1-c8516fd0e88c"/>
-        <h1 className="font-semibold text-emerald-500 text-sm sm:text-2xl">
+        <h1 className="font-semibold text-emerald-500 text-xl sm:text-xl">
           Blindbox Tino
         </h1>
       </div>
@@ -16,7 +16,7 @@ function HeaderAdmin({ onToggleSidebar }) {
       {/* Right Side: User Info and Avatar */}
       <div className="flex">
         <div className="flex gap-2 sm:gap-4 items-center">
-          <p className="font-semibold text-sm sm:text-lg hidden sm:block">Xin Chào, Tino Phan</p>
+          <p className="font-semibold text-xl sm:text-xl hidden sm:block">Xin Chào, Tino Phan</p>
 
           {/* Avatar */}
           <Avatar
