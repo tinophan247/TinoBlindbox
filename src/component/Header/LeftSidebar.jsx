@@ -24,7 +24,7 @@ function LeftSidebar({ isSidebarOpen }) {
           }
         >
           <DashboardIcon />
-          <span className="-mr-1 font-medium">Bảng điều khiển</span>
+          <span className="-mr-1 font-medium text-base sm:text-lg">Bảng điều khiển</span>
         </NavLink>
         <NavLink
           to="/product-management"
@@ -33,7 +33,7 @@ function LeftSidebar({ isSidebarOpen }) {
           }
         >
           <BadgeIcon />
-          <span className="-mr-1 font-medium">Sản Phẩm</span>
+          <span className="-mr-1 font-medium text-base sm:text-lg">Sản Phẩm</span>
         </NavLink>
       </div>
     </div>

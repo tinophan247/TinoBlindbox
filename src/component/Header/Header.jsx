@@ -15,13 +15,13 @@ function HeaderAdmin({ onToggleSidebar }) {
       {/* Right Side: User Info and Avatar */}
       <div className="flex">
         <div className="flex gap-2 sm:gap-4 items-center">
-          <p className="font-semibold text-xs sm:text-sm">Xin Chào, Tino Phan</p>
+          <p className="font-semibold text-base sm:text-lg">Xin Chào, Tino Phan</p>
 
           {/* Avatar */}
           <Avatar
             alt="Tino Phan"
             src="https://firebasestorage.googleapis.com/v0/b/uploadingfile-73c77.appspot.com/o/2024-11-21_02h34_40.png?alt=media&token=cad7c58f-8675-44b6-ad5f-1e82f9227bae"
-            sx={{ width: 24, height: 24 }} // Avatar smaller on mobile
+            sx={{ width: 30, height: 30 }} 
             className="sm:w-8 sm:h-8"
           />
         </div>
