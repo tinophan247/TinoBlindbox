@@ -1,0 +1,88 @@
+.loader {
+    width: 12rem; /* Use relative units */
+    height: 14rem;
+    position: relative;
+    background: #fff;
+    border-radius: 100px 100px 0 0;
+  }
+  
+  .loader:after {
+    content: "";
+    position: absolute;
+    width: 7.5rem;
+    height: 9.5rem;
+    left: 50%;
+    top: 1.5rem;
+    transform: translateX(-50%);
+    background-image: radial-gradient(circle, #000 48%, transparent 55%),
+      radial-gradient(circle, #000 48%, transparent 55%),
+      radial-gradient(circle, #fff 30%, transparent 45%),
+      radial-gradient(circle, #000 48%, transparent 51%),
+      linear-gradient(#000 1.25rem, transparent 0),
+      linear-gradient(#cfecf9 3.75rem, transparent 0),
+      radial-gradient(circle, #cfecf9 50%, transparent 51%),
+      radial-gradient(circle, #cfecf9 50%, transparent 51%);
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem, 1rem 1rem, 0.625rem 0.625rem, 2.625rem 2.625rem,
+      0.75rem 0.1875rem, 3.125rem 1.5625rem, 4.375rem 4.375rem, 4.375rem 4.375rem;
+    background-position: 1.5625rem 0.625rem, 3.4375rem 0.625rem, 2.25rem 2.75rem,
+      50% 1.875rem, 50% 5.3125rem, 50% 3.125rem, 50% 1.375rem, 50% 2.8125rem;
+    animation: facelift 0.5s linear infinite alternate;
+  }
+  
+  .loader:before {
+    content: "";
+    position: absolute;
+    width: 140%;
+    height: 9.5rem;
+    left: -20%;
+    top: 0;
+    background-image: radial-gradient(circle, #fff 48%, transparent 50%),
+      radial-gradient(circle, #fff 48%, transparent 50%);
+    background-repeat: no-repeat;
+    background-size: 4rem 4rem;
+    background-position: 0.625rem 0.75rem, 9.0625rem 0.75rem;
+    animation: earlift 0.5s linear infinite alternate;
+  }
+  
+  @keyframes facelift {
+    0% {
+      transform: translateX(-60%);
+    }
+    100% {
+      transform: translateX(-30%);
+    }
+  }
+  
+  @keyframes earlift {
+    0% {
+      transform: translateX(0.625rem);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Add media query for smaller screens */
+  @media (max-width: 768px) {
+    .loader {
+      width: 8rem;
+      height: 10rem;
+    }
+  
+    .loader:after {
+      width: 5rem;
+      height: 6rem;
+      background-size: 0.8rem 0.8rem, 0.8rem 0.8rem, 0.5rem 0.5rem, 2rem 2rem,
+        0.5rem 0.1rem, 2.5rem 1.25rem, 3rem 3rem, 3rem 3rem;
+      background-position: 1rem 0.5rem, 2.5rem 0.5rem, 1.5rem 2rem, 50% 1.5rem,
+        50% 4rem, 50% 2.5rem, 50% 1rem, 50% 2rem;
+    }
+  
+    .loader:before {
+      height: 7rem;
+      background-size: 3rem 3rem;
+      background-position: 0.5rem 0.5rem, 7rem 0.5rem;
+    }
+  }
+  
