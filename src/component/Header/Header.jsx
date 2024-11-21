@@ -15,7 +15,7 @@ function HeaderAdmin({ onToggleSidebar }) {
       {/* Right Side: User Info and Avatar */}
       <div className="flex">
         <div className="flex gap-2 sm:gap-4 items-center">
-          <p className="font-semibold text-base sm:text-lg">Xin Chào, Tino Phan</p>
+          <p className="font-semibold text-base sm:text-lg hidden sm:block">Xin Chào, Tino Phan</p>
 
           {/* Avatar */}
           <Avatar
