@@ -14,7 +14,7 @@ function LeftSidebar({ isSidebarOpen }) {
       id="sideNav"
       className={`${
         isSidebarOpen ? "block" : "hidden"
-      } lg:block bg-white w-full lg:w-[250px] fixed lg:top-[60px] left-0 h-full shadow-md z-10 transition-all duration-300 ease-in-out`}
+      } lg:block  bg-white w-full h-screen lg:w-[250px] lg:top-[60px] left-0 shadow-md z-10 transition-all duration-300 ease-in-out`}
     >
       <div className="p-4 space-y-4">
         <NavLink
@@ -27,7 +27,7 @@ function LeftSidebar({ isSidebarOpen }) {
           <span className="-mr-1 font-medium text-base sm:text-lg">Bảng điều khiển</span>
         </NavLink>
         <NavLink
-          to="/product-management"
+          to="/product"
           className={({ isActive }) =>
             isActive ? activeClassname : unactiveClassname
           }
