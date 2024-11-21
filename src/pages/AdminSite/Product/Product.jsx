@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 import AdminLayout from "../../../component/AdminLayout";
 import AddIcon from "@mui/icons-material/Add";
+import ProductTable from "./ProductTable";
 
 function Product() {
   return (
@@ -10,12 +11,20 @@ function Product() {
           <h1 className="text-xl font-semibold">Quản lý sản phẩm</h1>
           <Button
             variant="contained"
-            sx={{ backgroundColor: "black", color: "white", fontWeight: 600, marginTop: 2 }}
+            sx={{
+              backgroundColor: "black",
+              color: "white",
+              fontWeight: 600,
+              marginTop: 2,
+            }}
             startIcon={<AddIcon />}
             className="w-full sm:w-auto mt-4 sm:mt-0 px-4"
-            >
+          >
             Thêm sản phẩm
           </Button>
+        </div>
+        <div className="mt-10">
+          <ProductTable />
         </div>
       </div>
     </AdminLayout>
