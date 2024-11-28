@@ -13,8 +13,8 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "90%",
-  maxWidth: 600,
+  width: "100%",
+  maxWidth: 400,
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
@@ -65,8 +65,9 @@ export default function ProductModal({
   });
 
   const handleChange = (field, event) => {
-    const value = event.target.value;
-    if (value >= 0 || value === "") {
+    let value = event.target.value;
+  
+    if (/^[0-9]*\.?[0-9]*$/.test(value) || value === "") {
       formik.setFieldValue(field, value);
     }
   };
@@ -89,11 +90,11 @@ export default function ProductModal({
             />
           </div>
           <div className="flex justify-center items-center">
-            <form className="space-y-5" onSubmit={formik.handleSubmit}>
+            <form className="space-y-2" onSubmit={formik.handleSubmit}>
               <TextFields
                 name="Tên sản phẩm"
                 placeholder="Vui lòng nhập tên sản phẩm"
-                width="100%" // Make width 100% for mobile responsiveness
+                width="100%"
                 value={formik.values.name}
                 onChange={formik.handleChange("name")}
                 required={true}
@@ -103,7 +104,7 @@ export default function ProductModal({
               <TextFields
                 name="Hình ảnh"
                 placeholder="Vui lòng nhập hình ảnh"
-                width="100%" // Make width 100% for mobile responsiveness
+                width="100%"
                 value={formik.values.img}
                 onChange={formik.handleChange("img")}
                 required={true}
@@ -125,7 +126,7 @@ export default function ProductModal({
                 name="Giá sản phẩm"
                 type="number"
                 placeholder="Vui lòng nhập giá"
-                width="100%" // Make width 100% for mobile responsiveness
+                width="100%"
                 value={formik.values.oldPrice}
                 onChange={(e) => handleChange("oldPrice", e)}
                 required={true}
@@ -156,8 +157,8 @@ export default function ProductModal({
                     color: "white",
                     fontWeight: 600,
                     marginTop: 2,
-                    width: "100%", // Full width button for mobile screens
-                    maxWidth: 300, // Max width for larger screens
+                    width: "100%",
+                    maxWidth: 300,
                   }}
                   className="w-full sm:w-auto mt-4 sm:mt-0 px-4"
                 >

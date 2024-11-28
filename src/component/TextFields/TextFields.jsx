@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 
@@ -15,18 +16,15 @@ export default function TextFields({
 }) {
   return (
     <div>
-      <p className="font-medium text-sm mt-3">{name}</p>
+      <p className="font-medium text-sm mt-3 mb-1">{name}</p>
       <Box
         component="form"
         sx={{
           "& .MuiTextField-root": {
-            width: width,  // Ensure the width is responsive
+            width: width, 
             height: "30px",
-            marginBottom: "20px",
           },
         }}
-        noValidate
-        autoComplete="off"
       >
         <TextField
           size="small"
@@ -35,10 +33,32 @@ export default function TextFields({
           type={type}
           value={value}
           onChange={onChange}
-          helperText={helperText}
           error={error}
           required={required ?? null}
+          sx={{
+            "& .MuiInputBase-input": {
+              fontSize: "14px", 
+            },
+            "& .MuiInputBase-input::placeholder": {
+              fontSize: "14px",
+              color: "gray",
+            },
+            width: "100%", 
+            minWidth: "300px",
+          }}
         />
+        {helperText && (
+          <Typography
+            variant="body2"
+            sx={{
+              color: error ? "error.main" : "text.secondary",
+              fontSize: "12px",
+              marginTop: "10px",
+            }}
+          >
+            {helperText}
+          </Typography>
+        )}
       </Box>
     </div>
   );
